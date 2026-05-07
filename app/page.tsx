@@ -1,65 +1,140 @@
 import Image from "next/image";
+import { professor } from "@/data/portfolio";
+import {
+  IconPublications,
+  IconCitations,
+  IconStudents,
+  IconExperience,
+  IconArrowRight,
+  IconDownload,
+  IconMail,
+  IconQuote,
+} from "@/components/Icons";
 
-export default function Home() {
+const statIconMap: Record<string, React.FC<{ size?: number }>> = {
+  publications: IconPublications,
+  citations:    IconCitations,
+  students:     IconStudents,
+  experience:   IconExperience,
+};
+
+export default function HomePage() {
+  const { name, title, welcomeTag, heroHeading, description, quote, profileImage, navLinks, buttons, stats } =
+    professor;
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+
+      {/* ── Navbar ────────────────────────────────────────────────── */}
+      <header>
+        <div className="page-wrap">
+          <nav className="navbar" id="home" aria-label="Main navigation">
+            {/* Brand */}
+            <div>
+              <div className="navbar__brand-name">{name}</div>
+              <div className="navbar__brand-sub">{title}</div>
+            </div>
+
+            {/* Links */}
+            <ul className="navbar__links" role="list">
+              {navLinks.map((link, i) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className={`navbar__link${i === 0 ? " active" : ""}`}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </header>
+
+      {/* ── Hero ──────────────────────────────────────────────────── */}
+      <main style={{ flex: 1 }}>
+        <div className="page-wrap">
+          <section className="hero" aria-label="Hero section">
+
+            {/* Left – text + CTA */}
+            <div className="hero__left">
+              <p className="hero__tag">{welcomeTag}</p>
+
+              <h1 className="hero__heading">{heroHeading}</h1>
+
+              <div className="hero__divider" />
+
+              <p className="hero__description">{description}</p>
+
+              <div className="hero__actions">
+                <a id="btn-view-research" href={buttons.viewResearch.href} className="btn btn-primary">
+                  {buttons.viewResearch.label}
+                  <IconArrowRight />
+                </a>
+
+                <a id="btn-download-cv" href={buttons.downloadCV.href} className="btn btn-secondary" download>
+                  <IconDownload />
+                  {buttons.downloadCV.label}
+                </a>
+
+                <a id="btn-contact" href={buttons.contactMe.href} className="btn btn-secondary">
+                  <IconMail />
+                  {buttons.contactMe.label}
+                </a>
+              </div>
+            </div>
+
+            {/* Centre – Profile photo */}
+            <div className="hero__photo-wrap">
+              <Image
+                src={profileImage}
+                alt={`Portrait of ${name}`}
+                width={400}
+                height={533}
+                priority
+                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center" }}
+              />
+            </div>
+
+            {/* Right – Inspirational quote */}
+            <aside className="hero__quote" aria-label="Quote">
+              <IconQuote className="hero__quote-mark-svg" />
+              <blockquote className="hero__quote-text">{quote}</blockquote>
+              <div className="hero__quote-line" />
+            </aside>
+
+          </section>
+        </div>
+
+        {/* ── Stats Card ──────────────────────────────────────────── */}
+        <div className="page-wrap">
+          <section className="stats-section" aria-label="Academic statistics">
+            <div className="stats-card">
+              {stats.map((stat) => {
+                const Icon = statIconMap[stat.icon];
+                return (
+                  <div key={stat.icon} className="stat-item">
+                    {Icon && (
+                      <span className="stat-icon" aria-hidden="true">
+                        <Icon size={32} />
+                      </span>
+                    )}
+                    <span className="stat-value">{stat.value}</span>
+                    <span className="stat-label">
+                      {stat.label}
+                      {stat.sublabel && (
+                        <span className="stat-sublabel">{stat.sublabel}</span>
+                      )}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          </section>
         </div>
       </main>
+
     </div>
   );
 }
