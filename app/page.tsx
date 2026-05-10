@@ -11,6 +11,9 @@ import {
   IconQuote,
 } from "@/components/Icons";
 
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+
 const statIconMap: Record<string, React.FC<{ size?: number }>> = {
   publications: IconPublications,
   citations:    IconCitations,
@@ -26,31 +29,7 @@ export default function HomePage() {
     <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
 
       {/* ── Navbar ────────────────────────────────────────────────── */}
-      <header>
-        <div className="page-wrap">
-          <nav className="navbar" id="home" aria-label="Main navigation">
-            {/* Brand */}
-            <div>
-              <div className="navbar__brand-name">{name}</div>
-              <div className="navbar__brand-sub">{title}</div>
-            </div>
-
-            {/* Links */}
-            <ul className="navbar__links" role="list">
-              {navLinks.map((link, i) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    className={`navbar__link${i === 0 ? " active" : ""}`}
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <Navbar />
 
       {/* ── Hero ──────────────────────────────────────────────────── */}
       <main style={{ flex: 1 }}>
@@ -70,16 +49,13 @@ export default function HomePage() {
               <div className="hero__actions">
                 <a id="btn-view-research" href={buttons.viewResearch.href} className="btn btn-primary">
                   {buttons.viewResearch.label}
-                  <IconArrowRight />
                 </a>
 
                 <a id="btn-download-cv" href={buttons.downloadCV.href} className="btn btn-secondary" download>
-                  <IconDownload />
                   {buttons.downloadCV.label}
                 </a>
 
                 <a id="btn-contact" href={buttons.contactMe.href} className="btn btn-secondary">
-                  <IconMail />
                   {buttons.contactMe.label}
                 </a>
               </div>
@@ -112,14 +88,8 @@ export default function HomePage() {
           <section className="stats-section" aria-label="Academic statistics">
             <div className="stats-card">
               {stats.map((stat) => {
-                const Icon = statIconMap[stat.icon];
                 return (
                   <div key={stat.icon} className="stat-item">
-                    {Icon && (
-                      <span className="stat-icon" aria-hidden="true">
-                        <Icon size={32} />
-                      </span>
-                    )}
                     <span className="stat-value">{stat.value}</span>
                     <span className="stat-label">
                       {stat.label}
@@ -135,6 +105,7 @@ export default function HomePage() {
         </div>
       </main>
 
+      <Footer />
     </div>
   );
 }
