@@ -130,10 +130,11 @@ export default function ExperiencePage() {
             }}>
               {education.map((edu: any, idx) => (
                 <div key={idx} style={{ 
-                  background: "var(--stats-bg)", 
+                  background: "white", 
                   padding: "40px", 
                   borderRadius: "4px",
-                  border: "1px solid var(--stats-border)",
+                  border: "1px solid var(--border)",
+                  boxShadow: "0 10px 30px rgba(0,0,0,0.03)",
                   display: "flex",
                   flexDirection: "column"
                 }}>

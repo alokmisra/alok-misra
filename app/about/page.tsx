@@ -55,11 +55,11 @@ export default function AboutPage() {
               {/* Sidebar Info */}
               <aside className="about-sidebar">
                 <div style={{ 
-                  background: "var(--stats-bg)", 
+                  background: "white", 
                   padding: "48px", 
                   borderRadius: "4px",
-                  border: "1px solid var(--stats-border)",
-                  boxShadow: "0 10px 30px rgba(0,0,0,0.03)"
+                  border: "1px solid var(--border)",
+                  boxShadow: "0 10px 40px rgba(0,0,0,0.04)"
                 }}>
                   <h2 className="navbar__brand-name" style={{ fontSize: "1.6rem", marginBottom: "24px" }}>
                     Core Research Areas

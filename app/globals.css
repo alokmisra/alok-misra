@@ -296,9 +296,10 @@ img {
 }
 
 .stats-card {
-  background: var(--stats-bg);
+  background: white;
+  border: 1px solid var(--border);
   border-radius: 4px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.04);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
@@ -319,7 +320,8 @@ img {
   top: 25%;
   bottom: 25%;
   width: 1px;
-  background: rgba(0, 0, 0, 0.06);
+  background: var(--border);
+  opacity: 0.6;
 }
 
 .stat-icon {
