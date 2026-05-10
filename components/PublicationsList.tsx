@@ -174,10 +174,11 @@ export function PublicationsList({ publications }: { publications: readonly any[
             <div 
               key={startIndex + idx} 
               style={{ 
-                background: "var(--stats-bg)", 
+                background: "white", 
                 padding: "36px", 
-                borderRadius: "4px", // Minimal rounding
-                border: "1px solid var(--stats-border)",
+                borderRadius: "4px", 
+                border: "1px solid var(--border)",
+                boxShadow: "0 10px 30px rgba(0,0,0,0.03)",
                 transition: "transform 0.2s, box-shadow 0.2s",
                 position: "relative",
                 overflow: "hidden"
