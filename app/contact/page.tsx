@@ -18,22 +18,22 @@ export default function ContactPage() {
             <h1 className="hero__heading" style={{ fontSize: "clamp(2.5rem, 5vw, 3.5rem)" }}>
               Contact Details
             </h1>
-            <div className="hero__divider" style={{ margin: "20px 0" }} />
+            <div className="hero__divider" />
           </section>
 
           <section style={{ paddingBottom: "100px" }}>
-            <div style={{ 
+            <div className="contact-grid" style={{ 
               display: "grid", 
               gridTemplateColumns: "1fr 1fr", 
               gap: "40px",
               alignItems: "start"
             }}>
               {/* Contact Information (Left) */}
-              <div style={{ display: "flex", flexDirection: "column", gap: "36px" }}>
+              <div className="contact-info-column" style={{ display: "flex", flexDirection: "column", gap: "36px" }}>
                 <div>
                   <h2 className="navbar__brand-name" style={{ fontSize: "1.6rem", marginBottom: "20px" }}>Contact Information</h2>
-                  <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+                  <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+                    <div className="contact-item-wrap" style={{ display: "flex", alignItems: "center", gap: "16px" }}>
                       <div style={{ padding: "10px", background: "var(--stats-bg)", borderRadius: "4px", color: "var(--navy)" }}>
                         <IconMail size={18} />
                       </div>
@@ -45,7 +45,7 @@ export default function ContactPage() {
                       </div>
                     </div>
 
-                    <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+                    <div className="contact-item-wrap" style={{ display: "flex", alignItems: "center", gap: "16px" }}>
                       <div style={{ padding: "10px", background: "var(--stats-bg)", borderRadius: "4px", color: "var(--navy)" }}>
                         <span style={{ fontSize: "1.1rem", fontWeight: 700 }}>☏</span>
                       </div>
@@ -91,12 +91,12 @@ export default function ContactPage() {
               </div>
 
               {/* Contact Form (Right) */}
-              <div style={{ 
-                background: "var(--stats-bg)", 
+              <div className="contact-form-card" style={{ 
+                background: "white", 
                 padding: "32px", 
                 borderRadius: "4px",
-                border: "1px solid var(--stats-border)",
-                boxShadow: "0 10px 30px rgba(0,0,0,0.03)",
+                border: "1px solid var(--border)",
+                boxShadow: "0 10px 40px rgba(0,0,0,0.04)",
                 width: "100%"
               }}>
                 <h2 className="navbar__brand-name" style={{ fontSize: "1.4rem", marginBottom: "40px" }}>Send a Message</h2>

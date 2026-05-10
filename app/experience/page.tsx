@@ -30,11 +30,11 @@ export default function ExperiencePage() {
               Professional Experience
             </h2>
 
-            <div style={{ position: "relative", paddingLeft: "30px", borderLeft: "2px solid var(--border)" }}>
+            <div className="experience-timeline" style={{ position: "relative", paddingLeft: "30px", borderLeft: "2px solid var(--border)" }}>
               {employment.map((job: any, idx) => (
-                <div key={idx} style={{ marginBottom: "60px", position: "relative" }}>
+                <div key={idx} className="experience-item" style={{ marginBottom: "60px", position: "relative" }}>
                   {/* Dot on timeline */}
-                  <div style={{ 
+                  <div className="experience-dot" style={{ 
                     position: "absolute", 
                     left: "-37px", 
                     top: "6px", 
@@ -123,7 +123,7 @@ export default function ExperiencePage() {
               Education & Qualifications
             </h2>
 
-            <div style={{ 
+            <div className="education-grid" style={{ 
               display: "grid", 
               gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))", 
               gap: "30px" 

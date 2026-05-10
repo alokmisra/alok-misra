@@ -22,15 +22,15 @@ export default function PublicationsPage() {
             </h1>
             <div className="hero__divider" />
             
-            <div style={{ display: "flex", gap: "20px", marginTop: "20px" }}>
+            <div className="profile-links-container" style={{ display: "flex", gap: "16px", marginTop: "24px" }}>
               <a href={profiles.googleScholar} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
                 Google Scholar
               </a>
               <a href={profiles.scopus} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
-                Scopus Profile
+                Scopus
               </a>
               <a href={profiles.orcid} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
-                ORCID Profile
+                ORCID
               </a>
             </div>
           </section>

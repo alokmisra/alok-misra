@@ -58,7 +58,7 @@ export function PublicationsList({ publications }: { publications: readonly any[
   return (
     <div>
       {/* Filter & Sort Section */}
-      <div style={{ 
+      <div className="pub-filters-container" style={{ 
         marginBottom: "40px", 
         display: "flex", 
         flexDirection: "column", 
@@ -266,7 +266,7 @@ export function PublicationsList({ publications }: { publications: readonly any[
 
       {/* Pagination Controls */}
       {totalPages > 1 && (
-        <div style={{ 
+        <div className="pub-pagination-container" style={{ 
           marginTop: "60px", 
           display: "flex", 
           justifyContent: "center", 
@@ -274,6 +274,7 @@ export function PublicationsList({ publications }: { publications: readonly any[
           gap: "40px" // Increased gap
         }}>
           <button 
+            className="pub-pagination-btn"
             onClick={() => goToPage(Math.max(currentPage - 1, 1))}
             disabled={currentPage === 1}
             style={{ 
@@ -294,7 +295,7 @@ export function PublicationsList({ publications }: { publications: readonly any[
             <span style={{ fontSize: "1.2rem" }}>←</span> Previous
           </button>
           
-          <div style={{ display: "flex", gap: "24px" }}>
+          <div className="pub-pagination-pages" style={{ display: "flex", gap: "24px" }}>
             {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
               <button
                 key={page}

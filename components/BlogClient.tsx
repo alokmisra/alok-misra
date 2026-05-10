@@ -89,7 +89,7 @@ export default function BlogClient({ allPosts }: { allPosts: any[] }) {
 
       {/* Filters */}
       <section style={{ marginBottom: "20px", borderTop: "1px solid var(--border)", paddingTop: "40px" }}>
-        <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", alignItems: "center" }}>
+        <div className="blog-tags-container" style={{ display: "flex", gap: "10px", flexWrap: "wrap", alignItems: "center" }}>
           <span style={{ fontSize: "0.9rem", fontWeight: 700, color: "var(--navy)", marginRight: "10px" }}>FILTER BY:</span>
           {allTags.map(tag => (
             <button
@@ -122,6 +122,7 @@ export default function BlogClient({ allPosts }: { allPosts: any[] }) {
             filteredPosts.map((post, idx) => (
               <div 
                 key={idx} 
+                className="blog-list-item"
                 style={{ 
                   paddingBlock: "40px", 
                   borderBottom: idx === filteredPosts.length - 1 ? "none" : "1.5px solid var(--border)",
