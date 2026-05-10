@@ -82,3 +82,13 @@ export function IconQuote({ className }: { className?: string }) {
     </svg>
   );
 }
+export function IconPin({ size = 14, className, style }: { size?: number, className?: string, style?: any }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} style={style}>
+      <path d="M12 2v8" />
+      <path d="M9 10h6l-1 8h-4l-1-8z" />
+      <path d="M7 10h10" />
+      <path d="M12 18v4" />
+    </svg>
+  );
+}
