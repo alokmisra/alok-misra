@@ -5,7 +5,7 @@ date: "December 04, 2024"
 readTime: "4 min read"
 tags: ["Algorithms", "Scale"]
 slug: "distributed-algorithms"
-pinned: false
+pinned: true
 ---
 
 Scalability is the holy grail of distributed computing...
