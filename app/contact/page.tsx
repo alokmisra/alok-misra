@@ -39,10 +39,18 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <p style={{ fontSize: "0.7rem", fontWeight: 700, color: "var(--gold)", textTransform: "uppercase", marginBottom: "2px", letterSpacing: "0.05em" }}>Email Me</p>
-                        <a href="mailto:alok.misra@lpu.co.in" style={{ fontSize: "1.05rem", color: "var(--navy)", textDecoration: "none", fontWeight: 600 }}>
-                          alok.misra@lpu.co.in
+                        <a href="mailto:alokalokmm@gmail.com" style={{ fontSize: "1.05rem", color: "var(--navy)", textDecoration: "none", fontWeight: 600 }}>
+                          alokalokmm@gmail.com
+                        </a>
+                        
+                      <div>
+                        
+                        <a href="mailto:alok.31011@lpu.co.in" style={{ fontSize: "1.05rem", color: "var(--navy)", textDecoration: "none", fontWeight: 600 }}>
+                          alok.31011@lpu.co.in
                         </a>
                       </div>
+                      </div>
+                      
                     </div>
 
                     <div className="contact-item-wrap" style={{ display: "flex", alignItems: "center", gap: "16px" }}>
