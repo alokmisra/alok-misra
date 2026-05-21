@@ -9,15 +9,9 @@ import { fetchGroupPublic } from "../../lib/api";
 const GROUPS_CONFIG = [
   {
     token: "51674b6e-4e21-406c-84bf-210f6027b841",
-    totalSubmissions: 31,
-    completedSubmissions: 30,
-    avgScore: 74,
   },
   {
     token: "7a733883-2b79-46bb-852a-e40952a65167",
-    totalSubmissions: 19,
-    completedSubmissions: 19,
-    avgScore: 63,
   },
 ];
 
@@ -25,9 +19,6 @@ interface GroupCardProps {
   name: string;
   token: string;
   expiresAt: number;
-  totalSubmissions: number;
-  completedSubmissions: number;
-  avgScore: number;
   router: any;
 }
 
@@ -35,9 +26,6 @@ function GroupCard({
   name,
   token,
   expiresAt,
-  totalSubmissions,
-  completedSubmissions,
-  avgScore,
   router,
 }: GroupCardProps) {
   const expired = expiresAt > 0 && expiresAt < Math.floor(Date.now() / 1000);
@@ -95,30 +83,6 @@ function GroupCard({
         </span>
       </div>
 
-      {/* Stats container */}
-      <div style={{
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr 1.2fr",
-        gap: "12px",
-        background: "var(--stats-bg)",
-        padding: "16px",
-        borderRadius: "4px",
-        border: "1px solid var(--stats-border)",
-      }}>
-        <div>
-          <span style={{ display: "block", fontSize: "0.7rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.03em" }}>Submissions</span>
-          <span style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--navy)" }}>{totalSubmissions}</span>
-        </div>
-        <div>
-          <span style={{ display: "block", fontSize: "0.7rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.03em" }}>Completed</span>
-          <span style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--navy)" }}>{completedSubmissions}</span>
-        </div>
-        <div>
-          <span style={{ display: "block", fontSize: "0.7rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.03em" }}>Avg Score</span>
-          <span style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--gold)" }}>{avgScore}/100</span>
-        </div>
-      </div>
-
       {/* Bottom details: Expiry date & Arrow */}
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: "0.85rem", color: "var(--text-muted)", marginTop: "4px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
@@ -154,8 +118,7 @@ function SkeletonCard() {
         <div style={{ height: "20px", width: "40%", background: "var(--border)", borderRadius: "4px" }} className="animate-pulse" />
         <div style={{ height: "20px", width: "20%", background: "var(--border)", borderRadius: "100px" }} className="animate-pulse" />
       </div>
-      <div style={{ height: "60px", background: "var(--stats-bg)", borderRadius: "4px" }} className="animate-pulse" />
-      <div style={{ height: "16px", width: "60%", background: "var(--border)", borderRadius: "4px" }} className="animate-pulse" />
+      <div style={{ height: "16px", width: "60%", background: "var(--border)", borderRadius: "4px", marginTop: "16px" }} className="animate-pulse" />
     </div>
   );
 }
@@ -257,9 +220,6 @@ export default function EvaluationLandingPage() {
                   name={group.name}
                   token={group.token}
                   expiresAt={group.expiresAt}
-                  totalSubmissions={group.totalSubmissions}
-                  completedSubmissions={group.completedSubmissions}
-                  avgScore={group.avgScore}
                   router={router}
                 />
               ))
