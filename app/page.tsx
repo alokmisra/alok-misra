@@ -40,7 +40,7 @@ export default function HomePage() {
             <div className="hero__left">
               <p className="hero__tag">{welcomeTag}</p>
 
-              <h1 className="hero__heading">{heroHeading}</h1>
+              <h1 className="hero__heading" style={{ fontSize: "clamp(2.5rem, 5vw, 3.5rem)" }}>{heroHeading}</h1>
 
               <div className="hero__divider" />
 

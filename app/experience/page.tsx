@@ -18,7 +18,7 @@ export default function ExperiencePage() {
           {/* Hero Section */}
           <section style={{ paddingBlock: "60px 40px" }}>
             <p className="hero__tag">Professional Journey</p>
-            <h1 className="hero__heading" style={{ fontSize: "clamp(2.5rem, 5vw, 3.5rem)" }}>
+            <h1 className="hero__heading">
               Experience & Education
             </h1>
             <div className="hero__divider" />
@@ -52,12 +52,12 @@ export default function ExperiencePage() {
                     <h3 style={{ fontFamily: "var(--font-heading)", fontSize: "1.5rem", color: "var(--navy)", lineHeight: 1.3 }}>
                       {job.title}
                     </h3>
-                    <p style={{ fontSize: "1.1rem", fontWeight: 600, color: "var(--text-body)" }}>
+                    <p style={{ fontSize: "1.05rem", fontWeight: 600, color: "var(--text-body)" }}>
                       {job.institution}
                     </p>
                     
                     {job.description && (
-                      <p style={{ marginTop: "8px", fontSize: "1rem", color: "var(--text-muted)", lineHeight: 1.6 }}>
+                      <p style={{ marginTop: "8px", fontSize: "0.95rem", color: "var(--text-muted)", lineHeight: 1.6 }}>
                         {job.description}
                       </p>
                     )}
@@ -144,7 +144,7 @@ export default function ExperiencePage() {
                   <h3 style={{ fontFamily: "var(--font-heading)", fontSize: "1.4rem", color: "var(--navy)", marginBlock: "12px 8px" }}>
                     {edu.title}
                   </h3>
-                  <p style={{ fontSize: "1.05rem", color: "var(--text-body)", fontWeight: 600, marginBottom: "20px" }}>
+                  <p style={{ fontSize: "1rem", color: "var(--text-body)", fontWeight: 600, marginBottom: "20px" }}>
                     {edu.institution}
                   </p>
 

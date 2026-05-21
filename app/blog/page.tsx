@@ -15,7 +15,7 @@ export default function BlogPage() {
           {/* Hero Section */}
           <section style={{ paddingBlock: "40px 10px" }}>
             <p className="hero__tag">Insights & Research</p>
-            <h1 className="hero__heading" style={{ fontSize: "clamp(2.5rem, 5vw, 3.5rem)" }}>
+            <h1 className="hero__heading">
               Academic Blog
             </h1>
             <div className="hero__divider" style={{ margin: "20px 0" }} />

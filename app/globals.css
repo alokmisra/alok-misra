@@ -165,7 +165,7 @@ img {
 
 .hero__heading {
   font-family: var(--font-heading);
-  font-size: clamp(2.8rem, 4.2vw, 3.5rem);
+  font-size: clamp(2.2rem, 3.2vw, 2.6rem);
   font-weight: 400;
   color: var(--navy);
   line-height: 1.2;
@@ -180,7 +180,7 @@ img {
 }
 
 .hero__description {
-  font-size: 1.08rem;
+  font-size: 1rem;
   font-weight: 400;
   color: var(--text-body);
   line-height: 1.7;
@@ -771,5 +771,52 @@ img {
 
   .btn {
     justify-content: center;
+  }
+}
+
+.footer-author-link {
+  color: var(--navy);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-author-link:hover {
+  color: var(--gold);
+}
+
+/* ── Evaluation Form Layout ─────────────────────────────────────────── */
+.submit-form-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+@media (max-width: 860px) {
+  .submit-form-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.summary-grid-row {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  align-items: center;
+}
+.summary-grid-val {
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .summary-grid-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .summary-grid-val {
+    text-align: left;
   }
 }
