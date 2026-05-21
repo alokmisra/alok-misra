@@ -5,7 +5,7 @@ date: "May 14, 2024"
 readTime: "7 min read"
 tags: ["AI", "Innovation"]
 slug: "gemini-updates"
-pinned: true
+pinned: false
 thumbnail: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800&auto=format&fit=cover"
 ---
 At the latest Google I/O, the AI world witnessed a significant leap forward with the announcement of **Gemini 1.5 Flash** and **Project Astra**. These updates aren't just incremental improvements; they represent a fundamental shift in how we interact with multimodal models and how we deploy them at scale.
