@@ -31,6 +31,7 @@ export const professor = {
     { label: "Publications", href: "/publications" },
     { label: "Experience",   href: "/experience" },
     { label: "Blog",         href: "/blog" },
+    { label: "Evaluation",   href: "/evaluation" },
     { label: "Contact",      href: "/contact" },
   ],
 
