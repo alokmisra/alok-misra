@@ -14,7 +14,7 @@ export default function AboutPage() {
         <div className="page-wrap">
           <section className="about-hero" style={{ paddingBlock: "60px 40px" }}>
             <p className="hero__tag">Academic Profile</p>
-            <h1 className="hero__heading" style={{ fontSize: "clamp(2.5rem, 5vw, 3.5rem)" }}>
+            <h1 className="hero__heading">
               Pioneering Research in <br />
               Algorithms & Sensor Networks
             </h1>
@@ -36,7 +36,7 @@ export default function AboutPage() {
                     className="hero__description" 
                     style={{ 
                       maxWidth: "100%", 
-                      fontSize: "1.15rem", 
+                      fontSize: "1.05rem", 
                       marginBottom: "2rem",
                       textAlign: "justify"
                     }}
@@ -80,7 +80,7 @@ export default function AboutPage() {
                         paddingBlock: "12px",
                         borderBottom: "1px solid rgba(0,0,0,0.05)",
                         color: "var(--text-body)",
-                        fontSize: "1.05rem"
+                        fontSize: "0.95rem"
                       }}>
                         <span style={{ 
                           width: "8px", 

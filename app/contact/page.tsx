@@ -15,9 +15,7 @@ export default function ContactPage() {
           {/* Hero Section */}
           <section style={{ paddingBlock: "40px 10px" }}>
             <p className="hero__tag">Get in Touch</p>
-            <h1 className="hero__heading" style={{ fontSize: "clamp(2.5rem, 5vw, 3.5rem)" }}>
-              Contact Details
-            </h1>
+            <h1 className="hero__heading">Contact Details</h1>
             <div className="hero__divider" />
           </section>
 
