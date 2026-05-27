@@ -74,7 +74,7 @@ export default function ExperiencePage() {
                             padding: "6px 12px",
                             border: "1px solid var(--border)",
                             borderRadius: "4px",
-                            background: "white"
+                            background: "var(--surface)"
                           }}>
                             Institution Website
                           </a>
@@ -130,7 +130,7 @@ export default function ExperiencePage() {
             }}>
               {education.map((edu: any, idx) => (
                 <div key={idx} style={{ 
-                  background: "white", 
+                  background: "var(--surface)", 
                   padding: "40px", 
                   borderRadius: "4px",
                   border: "1px solid var(--border)",

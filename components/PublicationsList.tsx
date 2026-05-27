@@ -102,7 +102,7 @@ export function PublicationsList({ publications }: { publications: readonly any[
                     padding: "10px 20px",
                     borderRadius: "4px",
                     border: "1.5px solid var(--border)",
-                    background: "white",
+                    background: "var(--surface)",
                     color: "var(--navy)",
                     fontFamily: "var(--font-body)",
                     fontSize: "0.9rem",
@@ -125,7 +125,7 @@ export function PublicationsList({ publications }: { publications: readonly any[
                     top: "100%",
                     right: 0,
                     marginTop: "4px",
-                    background: "white",
+                    background: "var(--surface)",
                     border: "1.5px solid var(--border)",
                     borderRadius: "4px",
                     boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
@@ -145,7 +145,7 @@ export function PublicationsList({ publications }: { publications: readonly any[
                           padding: "12px 20px",
                           textAlign: "left",
                           border: "none",
-                          background: sortBy === option ? "var(--stats-bg)" : "white",
+                          background: sortBy === option ? "var(--stats-bg)" : "var(--surface)",
                           color: "var(--navy)",
                           fontSize: "0.9rem",
                           fontWeight: sortBy === option ? 600 : 400,
@@ -174,7 +174,7 @@ export function PublicationsList({ publications }: { publications: readonly any[
             <div 
               key={startIndex + idx} 
               style={{ 
-                background: "white", 
+                background: "var(--surface)", 
                 padding: "36px", 
                 borderRadius: "4px", 
                 border: "1px solid var(--border)",

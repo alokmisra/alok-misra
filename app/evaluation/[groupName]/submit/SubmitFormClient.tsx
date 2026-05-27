@@ -249,7 +249,7 @@ export default function SubmitFormClient({ groupName }: SubmitFormClientProps) {
       <div className="page-wrap flex items-center justify-center" style={{ minHeight: "50vh" }}>
         <div style={{
           textAlign: "center",
-          background: "white",
+          background: "var(--surface)",
           padding: "40px",
           borderRadius: "4px",
           border: "1px solid var(--border)",
@@ -293,7 +293,7 @@ export default function SubmitFormClient({ groupName }: SubmitFormClientProps) {
             </p>
           </div>
 
-          <div className="summary-card" style={{ background: "white", borderRadius: "6px", border: "1px solid var(--border)", boxShadow: "0 6px 30px rgba(0,0,0,0.03)", overflow: "hidden", marginBottom: "24px" }}>
+          <div className="summary-card" style={{ background: "var(--surface)", borderRadius: "6px", border: "1px solid var(--border)", boxShadow: "0 6px 30px rgba(0,0,0,0.03)", overflow: "hidden", marginBottom: "24px" }}>
             <div className="summary-grid-row">
               <div style={{ fontSize: "0.75rem", fontWeight: 700, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em" }}>Title</div>
               <div className="summary-grid-val" style={{ fontSize: "0.95rem", fontWeight: 600, color: "var(--navy)" }}>{inventionTitle}</div>
@@ -363,7 +363,7 @@ export default function SubmitFormClient({ groupName }: SubmitFormClientProps) {
 
             {/* Fields */}
             <div className="contact-form-card" style={{
-              background: "white",
+              background: "var(--surface)",
               padding: "32px",
               borderRadius: "4px",
               border: "1px solid var(--border)",
@@ -391,6 +391,9 @@ export default function SubmitFormClient({ groupName }: SubmitFormClientProps) {
                       padding: "10px 14px",
                       borderRadius: "4px",
                       border: "1.5px solid var(--border)",
+                      background: "var(--surface)",
+                      color: "var(--charcoal)",
+                      fontFamily: "var(--font-body)",
                       fontSize: "0.95rem"
                     }}
                   />
@@ -413,6 +416,9 @@ export default function SubmitFormClient({ groupName }: SubmitFormClientProps) {
                       padding: "10px 14px",
                       borderRadius: "4px",
                       border: "1.5px solid var(--border)",
+                      background: "var(--surface)",
+                      color: "var(--charcoal)",
+                      fontFamily: "var(--font-body)",
                       fontSize: "0.95rem"
                     }}
                   />
@@ -435,6 +441,9 @@ export default function SubmitFormClient({ groupName }: SubmitFormClientProps) {
                       padding: "10px 14px",
                       borderRadius: "4px",
                       border: "1.5px solid var(--border)",
+                      background: "var(--surface)",
+                      color: "var(--charcoal)",
+                      fontFamily: "var(--font-body)",
                       fontSize: "0.95rem"
                     }}
                   />
@@ -457,6 +466,9 @@ export default function SubmitFormClient({ groupName }: SubmitFormClientProps) {
                       padding: "10px 14px",
                       borderRadius: "4px",
                       border: "1.5px solid var(--border)",
+                      background: "var(--surface)",
+                      color: "var(--charcoal)",
+                      fontFamily: "var(--font-body)",
                       fontSize: "0.95rem"
                     }}
                   />
@@ -482,6 +494,9 @@ export default function SubmitFormClient({ groupName }: SubmitFormClientProps) {
                             padding: "10px 14px",
                             borderRadius: "4px",
                             border: "1.5px solid var(--border)",
+                            background: "var(--surface)",
+                            color: "var(--charcoal)",
+                            fontFamily: "var(--font-body)",
                             fontSize: "0.9rem"
                           }}
                         />
@@ -538,7 +553,7 @@ export default function SubmitFormClient({ groupName }: SubmitFormClientProps) {
             </h2>
 
             <div className="contact-form-card" style={{
-              background: "white",
+              background: "var(--surface)",
               padding: "32px",
               borderRadius: "4px",
               border: "1px solid var(--border)",
@@ -749,7 +764,7 @@ export default function SubmitFormClient({ groupName }: SubmitFormClientProps) {
           {/* Modal Container */}
           <div style={{
             position: "relative",
-            background: "white",
+            background: "var(--surface)",
             border: "1px solid #fee2e2",
             borderRadius: "4px",
             maxWidth: "400px",

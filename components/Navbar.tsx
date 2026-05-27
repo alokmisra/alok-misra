@@ -1,12 +1,50 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { professor } from "@/data/portfolio";
 
+// Persistent state across page transitions/mounts
+let globalLineStyle: React.CSSProperties = {
+  left: 0,
+  width: 0,
+  opacity: 0,
+};
+let isFirstLoad = true;
+
 export function Navbar() {
   const pathname = usePathname();
   const { name, title, navLinks } = professor;
+  const navRef = useRef<HTMLUListElement>(null);
+  
+  const [lineStyle, setLineStyle] = useState<React.CSSProperties>(globalLineStyle);
+
+  useEffect(() => {
+    const updateLine = () => {
+      if (!navRef.current) return;
+      const activeEl = navRef.current.querySelector(".navbar__link.active") as HTMLElement;
+      if (activeEl) {
+        const newStyle = {
+          left: activeEl.offsetLeft + (activeEl.offsetWidth - 28) / 2, // center the 28px indicator
+          width: 28,
+          opacity: 1,
+        };
+        setLineStyle(newStyle);
+        globalLineStyle = newStyle;
+      } else {
+        setLineStyle({ opacity: 0 });
+      }
+    };
+
+    updateLine();
+    isFirstLoad = false;
+
+    window.addEventListener("resize", updateLine);
+    return () => {
+      window.removeEventListener("resize", updateLine);
+    };
+  }, [pathname]);
 
   return (
     <header>
@@ -21,7 +59,7 @@ export function Navbar() {
           </Link>
 
           {/* Links */}
-          <ul className="navbar__links" role="list">
+          <ul ref={navRef} className="navbar__links" role="list">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -35,6 +73,8 @@ export function Navbar() {
                 </li>
               );
             })}
+            {/* Sliding Active Indicator Line */}
+            <div className={`navbar__active-line${isFirstLoad ? " no-transition" : ""}`} style={lineStyle} />
           </ul>
         </nav>
       </div>

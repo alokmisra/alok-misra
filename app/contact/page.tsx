@@ -98,7 +98,7 @@ export default function ContactPage() {
 
               {/* Contact Form (Right) */}
               <div className="contact-form-card" style={{ 
-                background: "white", 
+                background: "var(--surface)", 
                 padding: "32px", 
                 borderRadius: "4px",
                 border: "1px solid var(--border)",
@@ -117,7 +117,7 @@ export default function ContactPage() {
                         padding: "10px 14px", 
                         borderRadius: "4px", 
                         border: "1.5px solid var(--border)",
-                        background: "white",
+                        background: "var(--surface)",
                         fontFamily: "var(--font-body)",
                         fontSize: "0.95rem"
                       }} 
@@ -134,7 +134,7 @@ export default function ContactPage() {
                         padding: "10px 14px", 
                         borderRadius: "4px", 
                         border: "1.5px solid var(--border)",
-                        background: "white",
+                        background: "var(--surface)",
                         fontFamily: "var(--font-body)",
                         fontSize: "0.95rem"
                       }} 
@@ -151,7 +151,7 @@ export default function ContactPage() {
                         padding: "10px 14px", 
                         borderRadius: "4px", 
                         border: "1.5px solid var(--border)",
-                        background: "white",
+                        background: "var(--surface)",
                         fontFamily: "var(--font-body)",
                         fontSize: "0.95rem",
                         resize: "none"
