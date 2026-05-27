@@ -16,7 +16,7 @@ export function getSortedBlogsData() {
 
     // Read markdown file as string
     const fullPath = path.join(blogsDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const fileContents = fs.readFileSync(fullPath, "utf8").replace(/\r\n/g, "\n");
 
     // Simple manual frontmatter parser
     const parts = fileContents.split("---");
