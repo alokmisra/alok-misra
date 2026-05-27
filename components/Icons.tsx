@@ -92,3 +92,44 @@ export function IconPin({ size = 14, className, style }: { size?: number, classN
     </svg>
   );
 }
+
+/** Quote double icon for Citations stat */
+export function IconQuoteDouble({ size = 28, className, style }: { size?: number, className?: string, style?: any }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className} style={style}>
+      <path d="M8.5 17.5c2.5-1 4.5-3.5 4.5-6.5H9c0-2.5 1.5-4 4-4v1c-1.5 0-2.5 1-2.5 2.5h3c0 2.5-1.5 5-5 7zm10 0c2.5-1 4.5-3.5 4.5-6.5h-4c0-2.5 1.5-4 4-4v1c-1.5 0-2.5 1-2.5 2.5h3c0 2.5-1.5 5-5 7z" />
+    </svg>
+  );
+}
+
+/** Graduation Cap icon for h-index stat */
+export function IconGraduationCap({ size = 28 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M24 10v6M4 10l10-5 10 5-10 5-10-5zm4 2.5v5c0 2 2.5 3.5 6 3.5s6-1.5 6-3.5v-5" />
+    </svg>
+  );
+}
+
+/** User icon for Experience stat */
+export function IconUser({ size = 28 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M20 22a6 6 0 00-12 0" />
+      <circle cx="14" cy="11" r="4" />
+    </svg>
+  );
+}
+
+/** Beaker icon for Research Interests */
+export function IconBeaker({ size = 20 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M6 3h12" />
+      <path d="M9 3v6L4 18a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3L15 9V3" />
+      <path d="M6 14h12" />
+    </svg>
+  );
+}
+
+
