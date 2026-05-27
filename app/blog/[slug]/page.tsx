@@ -42,7 +42,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <header style={{ marginBottom: "50px" }}>
             <h1 style={{ 
               fontFamily: "var(--font-heading)", 
-              fontSize: "clamp(2.5rem, 5vw, 3.5rem)", 
+              fontSize: "clamp(1.8rem, 4.5vw, 2.5rem)", 
               color: "var(--navy)", 
               lineHeight: 1.1,
               marginBottom: "16px"

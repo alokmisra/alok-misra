@@ -47,7 +47,7 @@ function GroupCard({
     <div
       onClick={handleClick}
       style={{
-        background: "white",
+        background: "var(--surface)",
         padding: "24px 30px",
         borderRadius: "4px",
         border: "1.5px solid var(--border)",
@@ -105,7 +105,7 @@ function GroupCard({
 function SkeletonCard() {
   return (
     <div style={{
-      background: "white",
+      background: "var(--surface)",
       padding: "24px 30px",
       borderRadius: "4px",
       border: "1.5px solid var(--border)",

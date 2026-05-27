@@ -32,7 +32,7 @@ export default function BlogClient({ allPosts }: { allPosts: any[] }) {
               <div 
                 key={idx} 
                 style={{ 
-                  background: "white", 
+                  background: "var(--surface)", 
                   padding: "32px", 
                   borderRadius: "4px",
                   border: "1px solid var(--border)",
@@ -99,7 +99,7 @@ export default function BlogClient({ allPosts }: { allPosts: any[] }) {
                 padding: "8px 20px",
                 borderRadius: "4px",
                 border: "1.5px solid var(--border)",
-                background: activeFilter === tag ? "var(--navy)" : "white",
+                background: activeFilter === tag ? "var(--navy)" : "var(--surface)",
                 color: activeFilter === tag ? "white" : "var(--navy)",
                 fontSize: "0.85rem",
                 fontWeight: 600,
